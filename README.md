@@ -1,38 +1,56 @@
-#  Algorithms : Sentry Visibility Simulator
+# 👁️ Sentry Visibility Simulator
 
-**Algo-LL** is an interactive Python tool that visually simulates **sentry visibility** on a 2D coordinate plane.  
-It helps determine whether a sentry (a point) placed inside a bounded area can "see" the outside world, using **ray casting geometry**.
+## 🚀 Overview
 
----
+A Python-based interactive simulation that determines whether a point (sentry) inside a bounded 2D environment can "see" the outside world. The system uses ray-casting and computational geometry to evaluate visibility against obstacles.
 
-##  Features
+## 🔥 Key Features
 
-- **Geometric Computation** — Detects if rays from the sentry intersect with obstacles (segments).
-- **Graphical Interface** — Built using **Tkinter**, allowing users to draw segments and sentries easily.
-- **Ray Casting Algorithm** — Uses intersection logic to test visibility in all 360° directions.
-- **Coordinate System Visualization** — Displays axes and labeled points for clarity.
-- **Dynamic Interaction** — Add, test, and clear setups instantly.
+* 📐 Ray Casting Algorithm (360° visibility check)
+* 🧮 Line segment intersection detection
+* 🖥️ Interactive GUI using Tkinter
+* 🎯 Dynamic placement of sentry and obstacles
+* 📊 Visual coordinate system with axes
 
----
+## 🧠 Core Concept
 
-##  Concept
+The simulator uses **ray casting geometry**:
 
-This project is based on **ray-casting geometry**:
-- The sentry emits rays in multiple directions (every few degrees).
-- If *any* ray does **not** intersect with a segment (wall), the sentry can see “outside”.
-- Otherwise, the sentry is considered “inside” a closed enclosure.
+* Rays are emitted from the sentry in multiple directions
+* Each ray checks for intersection with boundary segments
+* If at least one ray escapes without intersection → visibility exists
+* Otherwise → sentry is enclosed
 
----
+## 🛠 Tech Stack
 
-## Tech Stack
+* Python 3
+* Tkinter (GUI)
+* Math (geometry calculations)
 
-- **Language:** Python 3  
-- **Libraries Used:**
-  - `tkinter` — GUI framework
-  - `math` — trigonometric and geometry operations
+## 📂 Project Structure
 
----
+```bash id="qkhhkp"
+sentry_visibility.py
+README.md
+```
 
-##  How to Run
+## ⚡ How to Run
+
+```bash id="cawkb3"
 python sentry_visibility.py
+```
 
+
+## 📈 Learning Outcome
+
+* Practical implementation of ray-casting algorithms
+* Understanding computational geometry concepts
+* Building interactive GUI applications in Python
+
+## 🎯 Use Case
+
+This project demonstrates how geometric algorithms can be applied in:
+
+* Game development (line of sight, visibility checks)
+* Robotics navigation
+* Computer graphics
